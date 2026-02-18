@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurunoor | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo" href="#home">Gurunoor</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="nav-icons">
+        <img
+          src="./assets/email.png"
+          alt="Email Me"
+          class="icon email-icon"
+          onclick="window.location.href = 'mailto:gurunoor218@gmail.com'"
+        />
+        <img
+          src="./assets/linkedin.png"
+          alt="My LinkedIn profile"
+          class="icon"
+          onclick="
+            window.open('https://www.linkedin.com/in/singhgurunoor/', '_blank')
+          "
+        />
+        <img
+          src="./assets/github.png"
+          alt="My Github profile"
+          class="icon"
+          onclick="window.open('https://github.com/Gurunoor', '_blank')"
+        />
+      </div>
+    </nav>
+
+    <section id="home" class="home">
+      <div class="tree-container">
+        <canvas id="treeCanvas"></canvas>
+      </div>
+
+      <div class="home-text">
+        <h1>hi, <span class="accent">gurunoor</span> here.</h1>
+        <p>
+          I'm a Full Stack Software Engineer with a passion for building
+          impactful products. I'm fascinated by large-scale, high-impact
+          products and contributed to major feature launches in industry-leading
+          services as well as apps that have 100M+ installs.
+        </p>
+        <a href="mailto:gurunoor218@gmail.com" class="intro-contact">
+          <img
+            src="./assets/email.png"
+            alt=""
+            class="btn-icon email-btn-icon"
+          />
+          Say hi!
+        </a>
+        <a
+          href="./assets/gurunoor_feb.pdf"
+          class="intro-contact"
+          download="Gurunoor_Singh_Resume"
+        >
+          <img src="./assets/downloads.png" alt="" class="btn-icon" />
+          Resume
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <span>/</span> about me
+        <div class="title-line"></div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-left">
+          <div class="about-text">
+            <p>
+              My journey in software engineering started with a fascination for
+              how code can streamline real-world workflows. From developing
+              offline chat features for mobile apps to managing
+              <span class="highlight">SSO implementations</span> across global
+              environments, I’ve always focused on one thing:
+              <span class="highlight">Efficiency</span>.
+            </p>
+            <p>
+              Currently, as a
+              <span class="highlight">Level 2 Digital Specialist Engineer</span
+              >, I lead full-stack development for major telecom clients. I
+              thrive in Agile environments where I can mentor engineers and dive
+              deep into performance bottlenecks.
+            </p>
+            <p>
+              When I'm not architecting
+              <span class="highlight">RESTful APIs</span> or refining CI/CD
+              pipelines, I’m usually looking for the next 'unsolvable'
+              production ticket to crack.
+            </p>
+          </div>
+
+          <p>Here are some technologies I have been working with:</p>
+          <div class="tech-grid">
+            <div>Java / Spring Boot</div>
+            <div>Angular</div>
+            <div>SQL / JSON Handling</div>
+            <div>Veracode / Security</div>
+            <div>SSO / Authentication</div>
+            <div>CI/CD (YAML)</div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="image-wrapper">
+            <img src="./assets/profile3.jpeg" alt="Gurunoor Singh" />
+            <div class="image-border"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title">
+        <span>/</span> experience
+        <div class="title-line"></div>
+      </div>
+
+      <div class="experience-container">
+        <div class="tab-list">
+          <button class="tab-link active" onclick="openTab(event, 'level2')">
+            INFOSYS DSE L2
+          </button>
+          <button class="tab-link" onclick="openTab(event, 'level1')">
+            INFOSYS DSE L1
+          </button>
+          <button class="tab-link" onclick="openTab(event, 'dse')">
+            INFOSYS DSE
+          </button>
+          <button class="tab-link" onclick="openTab(event, 'jellyfish')">
+            JELLYFISH
+          </button>
+          <div class="tab-indicator"></div>
+        </div>
+
+        <div class="tab-content-wrapper">
+          <div id="level2" class="tab-content" style="display: block">
+            <h3>
+              Digital Specialist Engineer L2
+              <span class="accent">@ Infosys</span>
+            </h3>
+            <p class="range">APRIL 2025 - PRESENT</p>
+            <ul>
+              <li>
+                Lead Spring Boot and Angular Developer for a major telecom
+                client, driving Agile delivery and full-stack features.
+              </li>
+              <li>
+                Restructured SQL logic and JSON handling, reducing critical
+                query execution time by 50%.
+              </li>
+              <li>
+                Directed and mentored an offshore team of 5 engineers, managing
+                stand-ups and task delegation.
+              </li>
+            </ul>
+          </div>
+
+          <div id="level1" class="tab-content">
+            <h3>
+              Digital Specialist Engineer L1
+              <span class="accent">@ Infosys</span>
+            </h3>
+            <p class="range">APRIL 2024 - MARCH 2025</p>
+            <ul>
+              <li>
+                Mitigated 400+ Veracode vulnerabilities (SQLi, XSS, CORS),
+                strengthening application security.
+              </li>
+              <li>
+                Engineered a key Work Order Panel module using Angular/Spring
+                Boot to improve operator workflow.
+              </li>
+              <li>
+                Implemented SSO across Prod, UAT, and Dev environments for
+                enhanced access control.
+              </li>
+            </ul>
+          </div>
+
+          <div id="dse" class="tab-content">
+            <h3>
+              Digital Specialist Engineer <span class="accent">@ Infosys</span>
+            </h3>
+            <p class="range">SEPT 2021 - MARCH 2024</p>
+            <ul>
+              <li>
+                Delivered user stories and bug fixes while maintaining high
+                reliability and security standards.
+              </li>
+              <li>
+                Improved API response times by 40% through code refactoring and
+                caching strategies.
+              </li>
+              <li>
+                Collaborated on architectural design for RESTful backend APIs.
+              </li>
+            </ul>
+          </div>
+
+          <div id="jellyfish" class="tab-content">
+            <h3>
+              Software Trainee
+              <span class="accent">@ Jellyfish Technologies</span>
+            </h3>
+            <p class="range">FEB 2021 - AUG 2021</p>
+            <ul>
+              <li>
+                Developed the "Immo Snapp" Android frontend using Angular and
+                Ionic.
+              </li>
+              <li>
+                Resolved 50+ production defects in 6 months, stabilizing the
+                application.
+              </li>
+              <li>
+                Reduced load times by 35% by implementing offline chat
+                functionality via local storage.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <span>/</span> pet projects
+        <div class="title-line"></div>
+      </div>
+
+      <div class="projects-container">
+        <div class="main-slider-wrapper" id="master-project-slider">
+          <div class="project-featured active">
+            <div class="project-slider-bg">
+              <img src="./assets/shaurya4.png" alt="Shaurya Portfolio" />
+            </div>
+            <div class="project-content">
+              <h2 class="project-name">Shaurya's Portfolio</h2>
+              <p class="project-description">
+                A personal portfolio website built to showcase creative work.
+                Features smooth scrolling and modern UI components.
+              </p>
+              <div class="project-tech">HTML, CSS, JAVASCRIPT</div>
+              <div class="project-links">
+                <img
+                  src="./assets/github.png"
+                  class="icon"
+                  onclick="
+                    window.open(
+                      'https://github.com/Gurunoor/Shaurya-Portfolio',
+                      '_blank',
+                    )
+                  "
+                />
+                <img
+                  src="./assets/internet.png"
+                  class="icon"
+                  onclick="
+                    window.open('https://shauryasingh.vercel.app/', '_blank')
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-featured">
+            <div class="project-slider-bg">
+              <img src="./assets/weather2.png" alt="Weather App" />
+            </div>
+            <div class="project-content">
+              <h2 class="project-name">Weather App</h2>
+              <p class="project-description">
+                Real-time weather tracking application fetching data from global
+                APIs with dynamic background changes.
+              </p>
+              <div class="project-tech">REACT.JS, OPENWEATHER API</div>
+              <div class="project-links">
+                <img
+                  src="./assets/github.png"
+                  class="icon"
+                  onclick="
+                    window.open('https://github.com/Gurunoor/weather', '_blank')
+                  "
+                />
+                <img
+                  src="./assets/internet.png"
+                  class="icon"
+                  onclick="
+                    window.open('https://guru-weather.vercel.app/', '_blank')
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="project-featured">
+            <div class="project-slider-bg">
+              <img src="./assets/patatap3.png" alt="Patatap Clone" />
+            </div>
+            <div class="project-content">
+              <h2 class="project-name">Patatap clone</h2>
+              <p class="project-description">
+                A sound-based creative application where every keypress triggers
+                a unique visual animation and audio sample.
+              </p>
+              <div class="project-tech">HOWLER.JS, PAPER.JS, JAVASCRIPT</div>
+              <div class="project-links">
+                <img
+                  src="./assets/github.png"
+                  class="icon"
+                  onclick="
+                    window.open(
+                      'https://github.com/Gurunoor/patatap-clone',
+                      '_blank',
+                    )
+                  "
+                />
+                <img
+                  src="./assets/internet.png"
+                  class="icon"
+                  onclick="
+                    window.open(
+                      'https://gurunoor.github.io/patatap-clone/',
+                      '_blank',
+                    )
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <button class="slider-arrow prev" onclick="changeProject(-1)">
+            &#10094;
+          </button>
+          <button class="slider-arrow next" onclick="changeProject(1)">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-container">
+      <div class="footer-text">
+        Built and designed by <span class="highlight">Gurunoor Singh</span>.
+        <p>All rights reserved. © 2026</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
